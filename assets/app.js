@@ -15,6 +15,7 @@ const secondTitle = select("#second-title")
 const plural = select("#plural")
 const textInput = select("#text-input")
 const submit = select("#submit")
+const filterOption = select("#filter")
 const todoList = select("#todo-list")
 const todoItems = todoList.children
 
@@ -83,6 +84,33 @@ function addTodo(e){
     }
 
 }
-
+function filterTodo(e){
+    const todos = todoList.children
+    console.log(todos)
+    for (let i = 0; i < todos.length; i++) {
+        const todo = todos[i];
+        switch (e.target.value) {
+            case "all":
+                todo.style.display = "flex"
+                break;
+            case "completed":
+                if(todo.firstElementChild.classList.contains("done")){
+                    todo.style.display ="flex"
+                }else{
+                    todo.style.display = "none"
+                }
+             break
+            case "uncompleted":
+                if(!todo.firstElementChild.classList.contains("done")){
+                    todo.style.display ="flex"
+                }else{
+                    todo.style.display = "none"
+                }
+            break
+        }
+        
+    }
+}
 //events
 submit.addEventListener("click",addTodo)
+filterOption.addEventListener("click",filterTodo)

@@ -6,13 +6,14 @@
 }
 :root{
     --bgd : linear-gradient(90deg, rgba(195,171,34,1) 0%, rgba(253,168,45,1) 100%);
+    --color : rgba(253,168,45,1);
 }
 body{
     background: rgb(195,171,34);
-    background: var(--bgd)
+    background: var(--bgd);
 }
 .container{
-    width: 400px;
+    width: 300px;
     margin: 3rem auto 0;
 }
 h1,h2{
@@ -39,7 +40,6 @@ form{
 }
 .row{
     margin: 0 auto;
-    width: 220px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ input:focus{
     outline: none;
 }
 .row button{
-    background: rgba(253,168,45,1);
+    background: var(--color);
     border-radius:2px ;
     color: white;
 }
@@ -88,6 +88,38 @@ input:focus{
 }
 .done{
   background-color: rgba(91, 145, 55, 0.7) ;  
+}
+.form-filter{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+select{
+    appearance: none;
+    border: none;
+    margin-left: 1rem;
+    color: var(--color);
+    padding: 3px 9px;
+    width: 8rem;
+
+
+}
+select:focus{
+    outline: none;
+}
+#select{
+    position: relative;
+}
+#select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #eb6734;
+    color: white;
+    padding: 2px 9px;
+    pointer-events: none;
+
 }
 .fall{
     transform: translateY(8rem) rotateZ(20deg);

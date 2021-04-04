@@ -18,12 +18,21 @@
                 <h2>You have <span id="total-task">0</span> task<span id="plural">s</span> todo</h2>
                 <h2 id="second-title" class="">You completed <span id="complete-task">0</span> out of <span id="total-task">0</span></h2>
             </div>
-            <form action="" id="form">
-                <div class="row">
-                    <input type="text" id="text-input">
-                    <button type="submit" id="submit">+</button>
+            <div class="form-filter">
+                <form action="" id="form">
+                    <div class="row">
+                        <input type="text" id="text-input">
+                        <button type="submit" id="submit">+</button>
+                    </div>
+                </form>
+                <div id="select">
+                    <select name="select" id="filter">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
                 </div>
-            </form>
+            </div>
             <div class="todo-list" id="todo-list">
                 
             </div>
