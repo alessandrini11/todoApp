@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgd : linear-gradient(90deg, rgba(195,171,34,1) 0%, rgba(253,168,45,1) 100%);
+}
+body{
+    background: rgb(195,171,34);
+    background: var(--bgd)
+}
+.container{
+    width: 400px;
+    margin: 3rem auto 0;
+}
+h1,h2{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 20px;
+}
+h2.display{
+    display: none;
+}
+.header{
+    margin: 1rem 0;
+}
+form{
+    margin: 2rem 0;
+}
+.row{
+    margin: 0 auto;
+    width: 220px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 3px 1px;
+}
+input:focus{
+    outline: none;
+}
+.row button{
+    background: rgba(253,168,45,1);
+    border-radius:2px ;
+    color: white;
+}
+.row input,.row button{
+    border: none;
+    padding: 8px;
+}
+
+.todo{
+    display: flex;
+    margin: 0.5rem 0;
+    height: 30px;
+    background: white;
+}
+.todo p{
+    width: 100%;
+    padding: 3px 9px;
+    font-family: 'Monserat';
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+#check,#trash{
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 10px;
+}
+#trash{
+    /* background: #b31010; */
+    background: rgba(179, 16, 16, 0.9);
+
+}
+#check{
+    background: #5b9137;
+}
+.done{
+  background-color: rgba(91, 145, 55, 0.7) ;  
+}
+
+

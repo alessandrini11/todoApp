@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/app.css">
+    <title>alexander's todo app</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>Alexander's todo app </h1>
+                <h2>You have <span id="total-task">0</span> task<span id="plural">s</span> todo</h2>
+                <h2 id="second-title" class="">You completed <span id="complete-task">0</span> out of <span id="total-task">0</span></h2>
+            </div>
+            <form action="" id="form">
+                <div class="row">
+                    <input type="text" id="text-input">
+                    <button type="submit" id="submit">+</button>
+                </div>
+            </form>
+            <div class="todo-list" id="todo-list">
+                <div class="todo ">
+                    <p class="" >text</p>
+                    <button id="check"><i class="fas fa-check"></i></button>
+                    <button id="trash"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="todo ">
+                    <p class="done"> text</p>
+                    <button id="check"><i class="fas fa-check"></i></button>
+                    <button id="trash"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="todo ">
+                    <p class="">text</p>
+                    <button id="check"><i class="fas fa-check"></i></button>
+                    <button id="trash"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/app.js"></script>
+</body>
+</html>
