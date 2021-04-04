@@ -53,7 +53,7 @@ function addTodo(e){
             p.classList.toggle("done")
             
             const tasksDone = selectAll(".done") 
-            if(tasksDone.length > 0){
+            if(tasksDone.length >= 0){
                 completeTask.innerText = tasksDone.length
 
             }
@@ -62,9 +62,16 @@ function addTodo(e){
 
         //delete task unwanted tasks
         function deleteTask(){
-            todo.remove()
-            const tasksDone = selectAll(".done") 
-            completeTask.innerText = tasksDone.length
+            
+            todo.classList.add("fall")
+            todo.addEventListener("transitionend",function(){
+                todo.remove()
+                const tasksDone = selectAll(".done") 
+                completeTask.innerText = tasksDone.length
+                for(let i=0; i < totalTask.length; i++){
+                    totalTask[i].innerText = todoItems.length
+                }
+            })
         }
         trash.addEventListener("click",deleteTask)
         for(let i=0; i < totalTask.length; i++){
